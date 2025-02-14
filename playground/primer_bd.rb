@@ -1,3 +1,4 @@
+# 14.02.25. 
 require 'active_record'
 require 'sqlite3'
 
@@ -7,26 +8,26 @@ ActiveRecord::Base.establish_connection(
   database: 'playground/mydatabase.db'
 )
 
-# Определение моделей и схемы базы данных
-class User < ActiveRecord::Base
-  has_many :orders
-end
+# ## Определение моделей и схемы базы данных
+class User < ActiveRecord::Base             # Пользователь
+  has_many :orders                          # 
+end                                         #
 
-class Product < ActiveRecord::Base
-  has_many :order_items
-end
+class Product < ActiveRecord::Base          # Продукт
+  has_many :order_items                     # 
+end                                         #
 
-class Order < ActiveRecord::Base
-  belongs_to :user
-  has_many :order_items
-end
+class Order < ActiveRecord::Base            # Заказ
+  belongs_to :user                          # 
+  has_many :order_items                     #
+end                                         #
 
-class OrderItem < ActiveRecord::Base
-  belongs_to :order
-  belongs_to :product
-end
+class OrderItem < ActiveRecord::Base        # Список товаров заказа
+  belongs_to :order                         # 
+  belongs_to :product                       #
+end                                         #
 
-# Создание таблиц в базе данных
+# ## Создание таблиц в базе данных
 ActiveRecord::Schema.define do
   create_table :users, force: true do |t|
     t.string :username, null: false
