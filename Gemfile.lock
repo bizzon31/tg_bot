@@ -223,6 +223,7 @@ GEM
       concurrent-ruby (~> 1.0)
     uri (1.0.2)
     useragent (0.16.11)
+    yaml (0.4.0)
     zeitwerk (2.7.1)
 
 PLATFORMS
@@ -241,10 +242,12 @@ DEPENDENCIES
   net-ssh (~> 7.3)
   ollama-ai (~> 1.3)
   pg (~> 1.5)
+  rake (~> 13.2)
   redis (~> 5.3)
   sequel (~> 5.89)
   sqlite3 (~> 2.5)
   telegram-bot-ruby (~> 2.2)
+  yaml (~> 0.4.0)
 
 BUNDLED WITH
-   2.5.23
+   2.6.3

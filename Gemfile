@@ -31,3 +31,7 @@ gem "net-ssh", "~> 7.3"
 gem "pg", "~> 1.5"
 
 gem "activerecord", "~> 8.0"
+
+gem "rake", "~> 13.2"
+
+gem "yaml", "~> 0.4.0"
